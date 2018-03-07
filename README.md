@@ -1,1 +1,1 @@
-# BazyDanychI4
+# Repozytorium na potrzeby laboratoriów z Baz Danych
