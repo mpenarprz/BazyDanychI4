@@ -1,1 +1,1 @@
-# Repozytorium na potrzeby laboratoriów z Baz Danych
+# Repozytorium na potrzeby laboratoriów z Baz Danych. Materialy dla grupy L5.
