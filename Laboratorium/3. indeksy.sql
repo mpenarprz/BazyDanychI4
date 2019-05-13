@@ -50,9 +50,19 @@ FROM
 	tracks t
 WHERE	
 	LENGTH(t.Name) > 120;
+
+/*
+QUERY 5: Wybór adresu klienta o podanym nazwisku
+*/
+SELECT 
+	Address 
+FROM 
+	customers 
+WHERE 
+	cast(LastName AS NVARCHAR(20)) = 'Tremblay';
 	
 /*
-QUERY 5: Wybór utworów o podanym gatunku
+QUERY 6: Wybór utworów o podanym gatunku
 */
 SELECT 
 	t.Name
@@ -63,7 +73,7 @@ WHERE
 	g.Name = 'Pop'
 	
 /*
-QUERY 6: Utwory i artyści muzyki pop piosenek do 30 sekund
+QUERY 7: Utwory i artyści muzyki pop piosenek do 30 sekund
 */
 SELECT 
 	t.Name,
@@ -78,7 +88,7 @@ WHERE
 	AND t.Milliseconds BETWEEN 0 AND 30000;
 	
 /*
-QUERY 7: Zliczenie utworów w ramach gatunków
+QUERY 8: Zliczenie utworów w ramach gatunków
 */
 SELECT 
 	g.Name,
@@ -90,7 +100,7 @@ GROUP BY
 	g.Name;
 	
 /*
-QUERY 8: Zliczenie w ramach gatunków kompozytorów
+QUERY 9: Zliczenie w ramach gatunków kompozytorów
 */
 SELECT 
 	g.Name,
@@ -102,7 +112,7 @@ GROUP BY
 	g.Name;
 	
 /*
-QUERY 9: Utwory których kompozytor jest wśród tabeli artists:
+QUERY 10: Utwory których kompozytor jest wśród tabeli artists:
 */
 SELECT 
 	t.Name
@@ -112,14 +122,14 @@ WHERE
 	EXISTS(SELECT * FROM artists a WHERE t.Composer = a.Name)
 
 /*
-QUERY 10: Wszyscy artyści
+QUERY 11: Wszyscy artyści
 */
 SELECT Name FROM artists
 UNION
 SELECT Composer FROM tracks
 
 /*
-QUERY 11: Gatunki kończące się na 'p'
+QUERY 12: Gatunki kończące się na 'p'
 */
 SELECT Name FROM genres WHERE Name LIKE '%p'
 
