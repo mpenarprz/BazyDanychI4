@@ -1,1 +1,1 @@
-# Repozytorium na potrzeby laboratorium z Baz Danych. Materialy dla grupy L3/L4.
+# Repozytorium na potrzeby laboratorium z Baz Danych.
